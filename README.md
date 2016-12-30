@@ -1,5 +1,6 @@
 # mc-server-status
 mc-server-status is a server status module created using the [mcapi.ca](https://mcapi.ca) server API.
+- Find the example page [here](https://whatisin.space).
 
 
 
