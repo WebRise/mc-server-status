@@ -1,11 +1,14 @@
 # mc-server-status
 mc-server-status is a server status module created using the [mcapi.ca](https://mcapi.ca) server API.
 
+
+
 mc-server-status allows owners and administrators of small or large servers to easily list or display information about their server without the hastle of dealing with and decoding JSON responses.
 Inside this repository, you will find an `example.php` file and `server-status.php` file. The `server-status.php` file is the main API, which should be included on all pages of which the API is used. The `example.php` page shows how the API may be used.
 Along with that, the `server-status.php` file also includes comments explaining what most parts of the file do. Although I do not support editing the file without prior knowledge, these comments make it easier to do so.
 
 **Using the API**
+
 When using mc-server-status, you must first upload the `server-status.php` file to your web server.
 Then, to include and use the mc-server-status module in your own pages, place the following PHP code in the top of your PHP files.
 ```php
@@ -14,6 +17,8 @@ include('server-status.php'); //Here, you will need to make sure that the server
 $data = status(); //Then, to make use of the API, you must set a variable equal to the return value of our function, status(). You can also set the enabled parameter if you wish to include extra statistics. | $data = status('true');
 ```
 After that, you are ready to display your statistics. Because we are using `$data` as our variable, we will grab all our statistics using `$data['statistic']`.
+
+
 
 **Displaying Statistics**
 To display statistics, we will use the PHP echo statement.
@@ -39,8 +44,11 @@ The following is a list of statistics:
   - `$data['server']` Returns the version of the server's jar file. (Spigot, CraftBukkit, etc.)
   - `$data['plugins']` Can be looped to return every plugin and its version used on the server.
   - `$data['players']` Can be looped to return every player currently on the server.
+
   
+
 **Credit**
+
 Credit for the main website and JSON API goes to [mcapi.ca](https://mcapi.ca).
 Website theme and framework by Bootswatch and Bootstrap.
 PHP module/function by [mathhulk](https://theartex.net).
