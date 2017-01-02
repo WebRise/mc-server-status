@@ -1,5 +1,5 @@
 <?php
-include('server-status.php'); //Include the API in the example.
+include_once('server-status.php'); //Include the API in the example.
 
 $data = status(); //Grab default statistics from the API.
 $extra = status('true'); //Grab extra statistics from the API.
