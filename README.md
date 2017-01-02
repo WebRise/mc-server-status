@@ -3,6 +3,8 @@ mc-server-status is a server status module created using the [mcapi.ca](https://
 - Find the example page [here](https://whatisin.space/mc-server-status).
 - **PLEASE READ**
   - Out of all the APIs I could find, mcapi.ca seemed to be the most up-to-date. However, when looking at the API, some of its features are unusable and cannot be displayed. At first, I was planning to release default statistics and extra statistics, but mcapi.ca's extensive feature doesn't seem to be working. Along with that, no APIs that fully supported the grasping of server icons could be found. I will try to fix these issues as soon as possible.
+
+
 mc-server-status allows owners and administrators of small or large servers to easily list or display information about their server without the hastle of dealing with and decoding JSON responses.
 Inside this repository, you will find an `example.php` file and `server-status.php` file. The `server-status.php` file is the main API, which should be included on all pages of which the API is used. The `example.php` page shows how the API may be used.
 Along with that, the `server-status.php` file also includes comments explaining what most parts of the file do. Although I do not support editing the file without prior knowledge, these comments make it easier to do so.
