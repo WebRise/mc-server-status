@@ -1,7 +1,13 @@
 <?php
-include('server-status.php');
-$data = status();
-$extra = status('true');
+include('server-status.php'); //Include the API in the example.
+
+$data = status(); //Grab default statistics from the API.
+$extra = status('true'); //Grab extra statistics from the API.
+
+$info = array(
+	'title'=>'MC Server Status', //This will be displayed in the title, main jumbotron, and navigation bar.
+	'description'=>'A server status module for websites using the mcapi.ca API.', //This will be displayed under the title on all pages.
+	'theme'=>'yeti'); //This is the name of the theme you wish to load. You can find a list of compatible themes at http://bootswatch.com/.
 ?>
 <html lang="en">
 	<head>
@@ -9,38 +15,38 @@ $extra = status('true');
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/<?php echo $info['theme']; ?>/bootstrap.min.css" rel="stylesheet">
 	</head>
 	<body>
 		<nav class="navbar navbar-default navbar-fixed-top">
 		  <div class="container">
 			<div class="navbar-header">
-			  <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			  </button>
-			  <a class="navbar-brand" href="#">Server Status</a>
+				<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href=""><?php echo $info['title']; ?></a>
 			</div>
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			  <ul class="nav navbar-nav">
-				<li class="active"><a href="#">Example</a></li>
-				<li><a href="https://github.com/mathhulk/mc-server-status">GitHub</a></li>
-				<li><a href="https://mcapi.ca">MCAPI</a></li>
-			  </ul>
-			  <ul class="nav navbar-nav navbar-right">
-				<li><a href="https://theartex.net">made by mathhulk</a></li>
-			  </ul>
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="">Status</a></li>
+					<li><a href="https://github.com/mathhulk/mc-server-status">GitHub</a></li>
+					<li><a href="https://mcapi.ca">MCAPI</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="https://theartex.net">made by mathhulk</a></li>
+				</ul>
 			</div>
 		  </div>
 		</nav>
 		
 		<div class="container">
 			<div class="jumbotron">
-				<h1><br>Server Status</h1>
-				<p>A server status module for websites using the mcapi.ca API.</p>
+				<h1><br><?php echo $info['title']; ?></h1> 
+				<p><?php echo $info['description']; ?></p>
 				<p><a data-toggle="modal" data-target="#help"class="btn btn-primary btn-md">Information</a></p>
 			</div>
 			
