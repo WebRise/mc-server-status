@@ -1,6 +1,6 @@
 # mc-server-status
 mc-server-status is a server status module created using the [mcapi.ca](https://mcapi.ca) server API.
-- Find the example page [here](https://whatisin.space/mc-server-status).
+- Find the example page [here](https://mathhulk.me/mc-server-status).
 - **PLEASE READ**
   - Out of all the APIs I could find, mcapi.ca seemed to be the most up-to-date. However, when looking at the API, some of its features are unusable and cannot be displayed. At first, I was planning to release default statistics and extra statistics, but mcapi.ca's extensive feature doesn't seem to be working. Along with that, no APIs that fully supported the grasping of server icons could be found. I will try to fix these issues as soon as possible.
 
